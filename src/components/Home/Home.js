@@ -1,27 +1,41 @@
-import React from "react";
-import { useLoaderData } from "react-router-dom";
+import React, { useContext } from "react";
 import Topic from "../Topic/Topic";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { TopicsContext } from "../../layouts/Main";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  const { data } = useLoaderData();
+  AOS.init();
+  const data = useContext(TopicsContext);
+
   return (
     <div>
       <div className='bg-[url("https://i.ibb.co/VLwDH3t/7xm-xyz689813.jpg")] flex justify-center items-center h-screen bg-cover'>
-        <div className="text-center">
+        <div
+          data-aos="fade-right"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+          className="text-center"
+        >
           <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-indigo-700 h-32">
             Learn Everywhere
           </h1>
           <h4 className="text-3xl font-semibold text-gray-900">
             Take the Quizes for Winning Award.
           </h4>
-          <button className="font-semibold shadow-md mt-10 text-[#195a46] py-3 px-8 rounded-md bg-[#FEB80B]">
-            TAKE QUIZ
-          </button>
+          <Link to="/topics">
+            <button className="font-semibold shadow-md mt-10 text-[#195a46] py-3 px-8 rounded-md bg-[#FEB80B]">
+              TAKE QUIZ
+            </button>
+          </Link>
         </div>
       </div>
 
       <div className="bg-yellow-50 pt-10">
-      <h2 className="text-5xl font-bold text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-indigo-700">Topics for Quiz</h2>
+        <h2 className="text-5xl font-bold text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-indigo-700">
+          Topics for Quiz
+        </h2>
         <div className="grid grid-cols-4 px-8 py-10 gap-4">
           {data.map((topic) => (
             <Topic key={topic.id} topic={topic} />
