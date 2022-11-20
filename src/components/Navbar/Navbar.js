@@ -10,7 +10,7 @@ const Navbar = () => {
             <div className='text-white font-semibold space-x-10'>
                 <NavLink
                     className={({isActive}) => isActive ? `text-[#00eda4] border-b-2 border-green-500 duration-300`:'hover:text-green-400 duration-300'}
-                    to='/home'>Home</NavLink>
+                    to='/'>Home</NavLink>
                 <NavLink
                     className={({isActive}) => isActive ? `text-[#00eda4] border-b-2 border-green-500 duration-300`:'hover:text-green-400 duration-300'}
                     to='/topics'>Topics</NavLink>
