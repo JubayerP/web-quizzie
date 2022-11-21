@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { motion, useScroll } from "framer-motion";
 
 const Navbar = () => {
+    const { scrollYProgress } = useScroll();
     return (
         <div className='bg-[#222222] h-24 flex justify-between items-center px-20'>
+            <motion.div style={{ scaleX: scrollYProgress }} className="progress-bar" />
             <div>
                 <Link to='/'><h3 className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-bold">Web Quizzie</h3></Link>
             </div>

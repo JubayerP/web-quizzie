@@ -4,10 +4,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { TopicsContext } from "../../layouts/Main";
 import { Link } from "react-router-dom";
+import './Motion.css';
 
 const Home = () => {
   AOS.init();
   const data = useContext(TopicsContext);
+  
 
   return (
     <div>
