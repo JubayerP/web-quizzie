@@ -17,7 +17,7 @@ const Quiz = ({ quiz }) => {
               
 
   return (
-    <div className="container mx-auto mt-4 shadow-md rounded-md bg-green-600 border p-10">
+    <div className="container mx-auto w-[80%] md:w-full mt-4 shadow-md rounded-md bg-green-600 border p-10">
           <div className="flex justify-between">
           <h1 className="text-2xl font-semibold text-yellow-50">{quiz.question}</h1>
               <FiEye onClick={()=>toast(`Correct Answer: ${correctAnswer}`)} size={30} color='white' className='cursor-pointer'/>
