@@ -4,6 +4,7 @@ import './App.css';
 import ErrorElement from './components/ErrorElement/ErrorElement';
 import Home from './components/Home/Home';
 import Quizes from './components/Quizes/Quizes';
+import Statistics from './components/Statistics/Statistics';
 import Topic from './components/Topic/Topic';
 import Topics from './components/Topics/Topics';
 import Main from './layouts/Main';
@@ -28,6 +29,10 @@ function App() {
           path: '/topic/:id',
           element: <Quizes />,
           loader: ({params}) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
+        },
+        {
+          path: '/statistics',
+          element: <Statistics />
         }
       ]
     }

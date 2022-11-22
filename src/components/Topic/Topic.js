@@ -8,7 +8,7 @@ const Topic = ({ topic }) => {
     const navigate = useNavigate();
     const {id, name, logo, total, } = topic;
     return (
-        <div data-aos='zoom-in' data-aos-delay='100' data-aos-duration="1000" className='bg-slate-700 p-5 rounded-md text-center'>
+        <div data-aos='zoom-in' data-aos-delay='100' data-aos-duration="1000"  data-aos-once="true" className='bg-slate-700 p-5 rounded-md text-center'>
             <img className='w-[300px] mx-auto' src={logo} alt="" />
             <div className='text-yellow-50 my-3 leading-8'>
                 <h3 className="text-3xl font-semibold">{name}</h3>
