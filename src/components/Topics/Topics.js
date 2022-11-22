@@ -10,7 +10,7 @@ const Topics = () => {
         <h2 className="text-5xl font-bold text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-indigo-700">
           Topics for Quiz
         </h2>
-        <div className="grid grid-cols-4 px-8 py-10 gap-4">
+        <div className="grid md:grid-cols-4 px-8 py-10 gap-4">
           {topics.map((topic) => (
             <Topic key={topic.id} topic={topic} />
           ))}
