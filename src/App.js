@@ -1,6 +1,7 @@
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import Blog from './components/Blog/Blog';
 import ErrorElement from './components/ErrorElement/ErrorElement';
 import Home from './components/Home/Home';
 import Quizes from './components/Quizes/Quizes';
@@ -22,6 +23,10 @@ function App() {
           element: <Home />
         },
         {
+          path: '/home',
+          element: <Home />
+        },
+        {
           path: '/topics',
           element: <Topics />
         },
@@ -33,6 +38,10 @@ function App() {
         {
           path: '/statistics',
           element: <Statistics />
+        },
+        {
+          path: '/blog',
+          element: <Blog />
         }
       ]
     }

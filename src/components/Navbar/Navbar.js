@@ -38,7 +38,7 @@ const Navbar = () => {
                 ? `text-[#00eda4] border-b-2 border-green-500 duration-300`
                 : "hover:text-green-400 duration-300"
             }
-            to="/"
+            to="/home"
           >
             Home
           </NavLink>
@@ -61,6 +61,16 @@ const Navbar = () => {
             to="/statistics"
           >
             Statistics
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? `text-[#00eda4] border-b-2 border-green-500 duration-300`
+                : "hover:text-green-400 duration-300"
+            }
+            to="/blog"
+          >
+            Blog
           </NavLink>
         </div>
       <div  className="text-white md:hidden block" onClick={() => setOpen(!open)}>
