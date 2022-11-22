@@ -22,12 +22,11 @@ const Quiz = ({ quiz }) => {
         <FiEye
           onClick={() => toast(`Correct Answer: ${correctAnswer}`)}
           size={30}
-          color="white"
-          className="cursor-pointer"
+          className="text-indigo-500 cursor-pointer"
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-6">
         {quiz.options.map((op, index) => (
           <div key={index} className="p-4 border border-indigo-500 rounded">
             <label className="text-indigo-500 font-semibold text-xl cursor-pointer">

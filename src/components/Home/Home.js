@@ -20,10 +20,10 @@ const Home = () => {
           data-aos-duration="1000"
           className="text-center"
         >
-          <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-indigo-700 h-32">
+          <h1 className="md:text-7xl text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-indigo-700 md:h-32 h-10">
             Learn Everywhere
           </h1>
-          <h4 className="text-3xl font-semibold text-gray-900">
+          <h4 className="md:text-3xl font-semibold text-gray-900">
             Take the Quizes for Winning Award.
           </h4>
           <Link to="/topics">

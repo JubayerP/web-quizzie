@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='container mx-auto grid grid-cols-3 gap-4 mt-10'>
+        <div className='container mx-auto grid md:grid-cols-3 gap-4 mt-10'>
             <div className='border p-4 rounded-md shadow'>
                 <p className='text-xl font-mono font-medium'>What is the Purpose of React Router?</p>
                 <p className='leading-7'>React Router is a Standerd library for routing in React. It enables the navigation among views of various components is React app, allows changing the browser URL, and keeps the UI in sync with the URL. React Router is mainly used for developing Single Page Application. It is Supply the browser with an asynchronous URL.</p>
